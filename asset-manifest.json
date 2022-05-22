@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/DarkFrogmovies/static/css/main.e5ce1c43.css",
-    "main.js": "/DarkFrogmovies/static/js/main.ec0893a5.js",
+    "main.js": "/DarkFrogmovies/static/js/main.3533114b.js",
     "index.html": "/DarkFrogmovies/index.html",
     "main.e5ce1c43.css.map": "/DarkFrogmovies/static/css/main.e5ce1c43.css.map",
-    "main.ec0893a5.js.map": "/DarkFrogmovies/static/js/main.ec0893a5.js.map"
+    "main.3533114b.js.map": "/DarkFrogmovies/static/js/main.3533114b.js.map"
   },
   "entrypoints": [
     "static/css/main.e5ce1c43.css",
-    "static/js/main.ec0893a5.js"
+    "static/js/main.3533114b.js"
   ]
 }
