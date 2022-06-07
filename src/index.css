@@ -33,14 +33,13 @@ nav {
 
 .header {
   background-color: black;
+  margin-bottom: 3rem;
   position: fixed;
-  width: 100%;
   z-index: 3;
-  top: 0;
 }
 
 .hiden {
-  margin-bottom: 40px;
+  margin-bottom: 90px;
 }
 
 .brand-logo {
@@ -138,3 +137,69 @@ label {
 .nf{
   color: #fff;
 }
+
+.card {
+  color: #fff;
+  background-color: black;
+}
+
+.card .card-content .card-title{
+  color: white;
+}
+
+.card-content {
+  padding-bottom: 45px !important;
+}
+
+.link{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  color: #fff;
+  opacity: 0.7;
+  font-size: 20px;
+  font-style: italic;
+  transition: all 0.3s linear;
+}
+
+.link:hover{
+  opacity: 1;
+  text-decoration: underline blue;
+}
+
+.movie__link{
+  margin: 15px;
+  text-align: center;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  font-style: italic;
+  font-size: 20px;
+  opacity: 0.5;
+  transition: all 0.3s linear;
+}
+
+.btn:hover{
+  background-color: transparent;
+  box-shadow: none;
+  opacity: 1;
+  text-decoration: overline blue;
+}
+
+/* Movie page */
+.movie__page{
+  margin-left: 50px;
+  margin-bottom: 50px
+}
+
+.movie__page__year__rated{
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+}
+

@@ -1,20 +1,17 @@
-import {Header} from './layout/header'
-import {Footer} from './layout/footer'
-import {Main} from './layout/main'
+import { Route, Routes } from "react-router-dom";
+import {Main} from './pages/Main'
+import { Layout } from "./components/Layout";
+import {MoviePage} from './pages/MoviePage'
 
 function App() {
   return (
     <>
-      <div className='page'>
-      <Header />
-
-      <div className='hiden'></div>
-
-      <Main />
-
-      <Footer />
-      </div>
-
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Main />} />
+          <Route path="/:id" element={<MoviePage/>}/>
+        </Route>
+      </Routes>
     </>
   );
 }

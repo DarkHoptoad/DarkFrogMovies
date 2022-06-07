@@ -2,8 +2,7 @@ import React, {useState, useEffect} from "react";
 import { Movies } from "../components/movies";
 import { Preloader } from "../components/preloader";
 import { Search } from "../components/search";
-
-const API_KEY = process.env.REACT_APP_API_KEY
+import {getMainMenu, getSearch} from '../api'
 
 const Main = () => {
 
@@ -12,9 +11,7 @@ const Main = () => {
 
 
   useEffect (() => {
-    fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=matrix`)
-        .then((response) => response.json())
-        .then((data) => 
+    getMainMenu().then((data) => 
             setMovies(data.Search),
             setLoading(false)
         )
@@ -42,13 +39,7 @@ const Main = () => {
   const searchMovies = (str, type) => {
     setLoading(true);
 
-    fetch(
-      `https://www.omdbapi.com/?apikey=${API_KEY}&s=${str}${
-        type !== "all" ? `&type=${type}` : ""
-      }`
-    )
-      .then((response) => response.json())
-      .then((data) => 
+    getSearch(str, type).then((data) => 
         setMovies(data.Search),
         setLoading(false)
       )
@@ -76,4 +67,4 @@ const Main = () => {
     );
 }
 
-export { Main };
+export { Main};

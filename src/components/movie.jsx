@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 function Movie(props) {
 
@@ -9,31 +10,32 @@ function Movie(props) {
          Poster: poster} = props;
 
 
-    return <div className='card movie'>
+    return <div className='card movie' id={id}>
 
-                <div class="card-image waves-effect waves-block waves-light">
+                <div className="card-image waves-effect waves-block waves-light">
                     {
                         poster === 'N/A' 
                         
                         ?
 
-                        <img class="activator" src={`https://via.placeholder.com/300x400?text=${title}`}/>
+                        <img className="activator" src={`https://via.placeholder.com/300x400?text=${title}`} alt={title}/>
 
                         :
 
-                        <img class="activator" src={poster}/>
+                        <img className="activator" src={poster} alt={title}/>
                     }
 
                     
 
                 </div>
 
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">{title}</span>
+                <div className="card-content">
+                    <span className="card-title">{title}</span>
                     <p>{year}
                         <span className='right'>{type}</span>
                     </p>
                 </div>
+                <Link className="link" to={`/${id}`}>See more</Link>
 
             </div>
 }
