@@ -15,7 +15,7 @@ body {
   flex-direction: column;
 }
 
-.footer{
+.footer {
   margin-top: auto;
 }
 
@@ -39,7 +39,7 @@ nav {
 }
 
 .hiden {
-  margin-bottom: 90px;
+  margin-bottom: 70px;
 }
 
 .brand-logo {
@@ -97,7 +97,7 @@ nav {
   top: 0;
   right: 0.5rem;
   background-color: transparent;
-  padding: 10px ;
+  padding: 10px;
   opacity: 0.5;
   transition: opacity 0.2s linear;
   border: none;
@@ -117,6 +117,12 @@ nav {
 
 .radio__txt {
   color: #fff;
+  min-width: 30%;
+}
+
+.radio__item {
+  /* min-width: 33%; */
+  position: relative;
 }
 
 label {
@@ -134,7 +140,7 @@ label {
   border: 2px solid #00ff1d;
 }
 
-.nf{
+.nf {
   color: #fff;
 }
 
@@ -143,7 +149,7 @@ label {
   background-color: black;
 }
 
-.card .card-content .card-title{
+.card .card-content .card-title {
   color: white;
 }
 
@@ -151,12 +157,12 @@ label {
   padding-bottom: 45px !important;
 }
 
-.link{
+.link {
   position: absolute;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  
+
   color: #fff;
   opacity: 0.7;
   font-size: 20px;
@@ -164,12 +170,12 @@ label {
   transition: all 0.3s linear;
 }
 
-.link:hover{
+.link:hover {
   opacity: 1;
   text-decoration: underline blue;
 }
 
-.movie__link{
+.movie__link {
   margin: 15px;
   text-align: center;
 }
@@ -184,7 +190,7 @@ label {
   transition: all 0.3s linear;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: transparent;
   box-shadow: none;
   opacity: 1;
@@ -192,14 +198,52 @@ label {
 }
 
 /* Movie page */
-.movie__page{
+.movie__page {
   margin-left: 50px;
-  margin-bottom: 50px
+  margin-bottom: 50px;
 }
 
-.movie__page__year__rated{
+.movie__page__year__rated {
   display: flex;
   flex-direction: column;
   line-height: 2;
 }
 
+@media (max-width: 768px) {
+  .header {
+  }
+  .brand-logo {
+    font-size: 30px !important;
+  }
+}
+
+@media (max-width: 490px) {
+  .brand-logo {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 467px) {
+  .radio__txt {
+    font-size: 11px !important;
+    min-width: 10px !important;
+    max-width: 100px !important;
+
+    padding: 0 0 0 25px !important;
+  }
+}
+
+@media (max-width: 423px) {
+  .movie__page {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 340px) {
+  .brand-logo {
+    font-size: 18px !important;
+  }
+  .movie__page {
+    margin-left: 0;
+  }
+}
